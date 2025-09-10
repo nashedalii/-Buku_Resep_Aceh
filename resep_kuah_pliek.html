@@ -1,0 +1,213 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resep Mie Aceh — Resep Masakan Aceh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f7f6f3;
+      --card:#ffffff;
+      --accent:#c84b31; /* earthy, warm tone */
+      --muted:#6b6b6b;
+      --radius:14px;
+      --glass: rgba(255,255,255,0.6);
+    }
+    *{box-sizing:border-box}
+    body{
+      font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      margin:0;
+      background: linear-gradient(180deg, #fbfaf8 0%, var(--bg) 100%);
+      color:#222;
+      padding:28px;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+    }
+
+    .container{
+      max-width:900px;
+      margin:0 auto;
+      display:grid;
+      grid-template-columns: 1fr 360px;
+      gap:28px;
+      align-items:start;
+    }
+
+    header{grid-column:1/-1; display:flex; justify-content:space-between; align-items:center; gap:16px}
+    .title{
+      display:flex; flex-direction:column;
+    }
+    h1{margin:0; font-size:1.6rem; color:var(--accent)}
+    p.lead{margin:6px 0 0; color:var(--muted); font-size:0.95rem}
+
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow: 0 8px 20px rgba(21,21,21,0.06);
+    }
+
+    /* Left column: recipe */
+    .recipe{
+      min-height:200px;
+    }
+
+    .meta{
+      display:flex; gap:12px; color:var(--muted); font-size:0.9rem; margin-bottom:12px;
+    }
+    .meta span{display:inline-flex; gap:8px; align-items:center}
+
+    h2{margin-top:0}
+
+    .grid-ingredients{
+      display:grid; grid-template-columns:1fr 1fr; gap:12px;
+    }
+    ul{margin:8px 0 16px 20px}
+    li{margin:6px 0}
+
+    /* Right column: summary & tips */
+    .aside .section{margin-bottom:16px}
+    .badge{display:inline-block; background:var(--glass); padding:6px 10px; border-radius:999px; font-weight:600; color:var(--accent);}
+
+    .steps ol{padding-left:18px}
+    .steps li{margin:10px 0}
+
+    .topping{display:flex; gap:10px; flex-wrap:wrap}
+    .topping .chip{padding:8px 10px; border-radius:8px; background:#f2f2f2; font-size:0.9rem}
+
+    .actions{display:flex; gap:8px; margin-top:8px}
+    .btn{border:0; padding:10px 14px; border-radius:10px; cursor:pointer; font-weight:600}
+    .btn-primary{background:var(--accent); color:white}
+    .btn-ghost{background:transparent; border:1px solid #eee}
+
+    footer{grid-column:1/-1; margin-top:22px; color:var(--muted); font-size:0.9rem}
+
+    /* Responsive */
+    @media (max-width:880px){
+      .container{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="title">
+        <h1>Resep Mie Aceh</h1>
+        <p class="lead">Resep sederhana Mie Aceh yang gurih, berempah, cocok jadi santapan keluarga.</p>
+      </div>
+      <div style="text-align:right">
+        <div class="badge">Masakan Aceh</div>
+        <div style="margin-top:8px;color:var(--muted);font-size:0.85rem">Estimasi: 30–40 menit • 3–4 porsi</div>
+      </div>
+    </header>
+
+    <main class="card recipe">
+      <div class="meta">
+        <span>🍳 Pembuat: Kamu</span>
+        <span>🕒 Waktu: 30–40 menit</span>
+        <span>👥 Porsi: 3–4</span>
+      </div>
+
+      <h2>Bahan-bahan</h2>
+      <div class="grid-ingredients">
+        <div>
+          <strong>Utama</strong>
+          <ul>
+            <li>500 gr mie kuning</li>
+            <li>150 gr udang</li>
+            <li>100 gr daging sapi, potong kotak-kotak kecil</li>
+            <li>100 gr kol putih, iris</li>
+            <li>100 gr toge</li>
+            <li>1 buah tomat, potong memanjang</li>
+            <li>1 sdm kecap asin</li>
+            <li>2 batang daun bawang, iris halus</li>
+            <li>2 sdm kecap manis</li>
+            <li>4 siung bawang putih, iris</li>
+            <li>4 siung bawang merah, iris</li>
+            <li>Garam secukupnya</li>
+            <li>Kaldu jamur secukupnya</li>
+            <li>2 sdm minyak untuk menumis</li>
+          </ul>
+        </div>
+
+        <div>
+          <strong>Bumbu halus</strong>
+          <ul>
+            <li>1 sdt garam</li>
+            <li>1/2 sdt merica</li>
+            <li>1/4 sdt adas manis</li>
+            <li>2 buah kapulaga</li>
+            <li>2 buah kemiri</li>
+            <li>2 sdm bubuk kari India</li>
+            <li>3 siung bawang putih</li>
+            <li>5 buah cabai rawit</li>
+            <li>1 sdm minyak untuk menghaluskan bumbu</li>
+          </ul>
+
+          <strong>Bahan topping</strong>
+          <div class="topping" style="margin-top:8px">
+            <div class="chip">Emping secukupnya</div>
+            <div class="chip">Telur ceplok / dadar</div>
+          </div>
+        </div>
+      </div>
+
+      <h2>Cara membuat</h2>
+      <div class="steps">
+        <ol>
+          <li>Haluskan semua bumbu halus lalu tambahkan sedikit minyak. Sisihkan.</li>
+          <li>Tumis bawang merah dan bawang putih hingga harum, masukkan udang dan daging. Aduk hingga berubah warna.</li>
+          <li>Masukkan bumbu halus dan mie kuning, aduk rata hingga bumbu menyatu.</li>
+          <li>Tambahkan tauge, kecap manis, kecap asin, garam, dan kaldu jamur. Aduk dan koreksi rasa sesuai selera.</li>
+          <li>Terakhir tambahkan irisan tomat dan daun bawang, aduk sebentar. Angkat.</li>
+          <li>Sajikan mie aceh panas dengan topping emping dan telur ceplok atau telur dadar di atasnya.</li>
+        </ol>
+      </div>
+
+      <div style="margin-top:14px; display:flex; gap:10px; align-items:center">
+        <button class="btn btn-primary" onclick="window.print()">Cetak Resep</button>
+        <button class="btn btn-ghost" onclick="copyRecipe()">Salin ke clipboard</button>
+        <div style="color:var(--muted); font-size:0.9rem">Tip: koreksi garam & kecap sesuai selera.</div>
+      </div>
+
+    </main>
+
+    <aside class="card aside">
+      <div class="section">
+        <h3 style="margin-top:0">Catatan & Tips</h3>
+        <ul>
+          <li>Untuk rasa lebih otentik, tambahkan sedikit minyak samin atau mentega saat menumis.</li>
+          <li>Jika suka pedas, tambahkan lebih banyak cabai rawit atau saus sambal sesuai selera.</li>
+          <li>Gunakan mie kuning segar untuk tekstur yang kenyal—rebus sebentar saja sebelum dimasak dengan bumbu.</li>
+        </ul>
+      </div>
+
+      <div class="section">
+        <h3>Variasi</h3>
+        <p style="margin:6px 0 0">Bisa diganti protein dengan ayam suwir, atau buat versi kuah seperti mie aceh kuah dengan menambah kaldu dan sedikit santan.</p>
+      </div>
+
+      <div class="section">
+        <h3>Informasi Gizi (perkiraan)</h3>
+        <p style="margin:6px 0 0;color:var(--muted);font-size:0.95rem">Per porsi: ±450 kcal (bergantung bahan & porsi).</p>
+      </div>
+    </aside>
+
+    <footer>
+      Dibuat dengan ❤️ — Selamat memasak! • Jika mau, saya bisa bantu ubah ke versi printable PDF atau versi bahasa Inggris.
+    </footer>
+  </div>
+
+  <script>
+    function copyRecipe(){
+      const text = document.documentElement.outerHTML;
+      navigator.clipboard.writeText(text).then(()=>{
+        alert('HTML resep disalin ke clipboard.');
+      }).catch(()=>{
+        alert('Gagal menyalin. Silakan salin manual.');
+      })
+    }
+  </script>
+</body>
+</html>
